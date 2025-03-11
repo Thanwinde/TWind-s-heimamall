@@ -81,7 +81,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         // 3.清理购物车商品
         //cartService.removeByItemIds(itemIds);
         cartClient.removeByItemIds(itemIds);
-
+        System.out.println(detailDTOS.toString());
         // 4.扣减库存
         try {
             itemClient.deductStock(detailDTOS);

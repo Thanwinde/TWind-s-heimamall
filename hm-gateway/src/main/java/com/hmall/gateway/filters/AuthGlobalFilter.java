@@ -54,11 +54,13 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             response.setRawStatusCode(401);
             return response.setComplete();
         }
-
-        // TODO 5.如果有效，传递用户信息
+        String id = userId.toString();
+        ServerWebExchange swg = exchange.mutate()
+                .request(b -> b.header("user-info", id))
+                .build();
         System.out.println("userId = " + userId);
         // 6.放行
-        return chain.filter(exchange);
+        return chain.filter(swg);
     }
 
     private boolean isExclude(String antPath) {

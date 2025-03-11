@@ -20,14 +20,9 @@ public class JwtTool {
         this.jwtSigner = JWTSignerUtil.createSigner("rs256", keyPair);
     }
 
-    /**
-     * 创建 access-token
-     *
-     * @param userDTO 用户信息
-     * @return access-token
-     */
+
     public String createToken(Long userId, Duration ttl) {
-        // 1.生成jws
+        // 1.生成jwt
         return JWT.create()
                 .setPayload("user", userId)
                 .setExpiresAt(new Date(System.currentTimeMillis() + ttl.toMillis()))
