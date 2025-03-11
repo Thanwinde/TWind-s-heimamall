@@ -30,6 +30,7 @@
             <version>1.0.0</version>
         </dependency>
 
+
         <!--nacos 服务注册发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

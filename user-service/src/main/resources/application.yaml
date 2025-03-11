@@ -13,7 +13,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.247.132:8848
+        server-addr: 192.168.247.133:8848
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -49,12 +49,6 @@ hm:
     alias: hmall
     password: hmall123
     tokenTTL: 30m
-  auth:
-    excludePaths:
-      - /search/**
-      - /users/login
-      - /items/**
-      - /hi
 feign:
   okhttp:
     enabled: true
