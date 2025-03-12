@@ -23,6 +23,11 @@
             <artifactId>hm-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!--sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
         <!--nacos配置管理-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
