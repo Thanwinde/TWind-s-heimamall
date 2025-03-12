@@ -1,6 +1,6 @@
-13:51:32:601  INFO 16360 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 16360 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
-13:51:32:604 DEBUG 16360 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
-13:51:32:605  INFO 16360 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+13:51:32:601  INFO 16360 --- [main] com.hmall.user.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 16360 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
+13:51:32:604 DEBUG 16360 --- [main] com.hmall.user.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+13:51:32:605  INFO 16360 --- [main] com.hmall.user.HMallApplication               : The following 1 profile is active: "local"
 13:51:33:326  INFO 16360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
 13:51:33:328  INFO 16360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 13:51:33:357  INFO 16360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
@@ -18,7 +18,7 @@
 13:51:36:216  INFO 16360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
 13:51:36:218  INFO 16360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
 13:51:36:244  INFO 16360 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-13:51:36:396  INFO 16360 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 4.214 seconds (JVM running for 5.321)
+13:51:36:396  INFO 16360 --- [main] com.hmall.user.HMallApplication               : Started HMallApplication in 4.214 seconds (JVM running for 5.321)
 13:55:39:563  INFO 16360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 13:55:39:565  INFO 16360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 13:55:39:566  INFO 16360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
@@ -212,12 +212,12 @@ com.hmall.common.exception.UnauthorizedException: 未登录
 
 13:58:34:871  INFO 16360 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 13:58:35:094  INFO 16360 --- [http-nio-8080-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-13:58:35:101 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.mapper.UserMapper.selectOne    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
-13:58:35:120 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.mapper.UserMapper.selectOne    : ==> Parameters: jack(String)
-13:58:35:153 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.mapper.UserMapper.selectOne    : <==      Total: 1
-13:58:35:514 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-13:58:35:514 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
-13:58:35:519 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : <==      Total: 0
+13:58:35:101 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.trade.mapper.UserMapper.selectOne    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+13:58:35:120 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.trade.mapper.UserMapper.selectOne    : ==> Parameters: jack(String)
+13:58:35:153 DEBUG 16360 --- [http-nio-8080-exec-9] com.hmall.trade.mapper.UserMapper.selectOne    : <==      Total: 1
+13:58:35:514 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.trade.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+13:58:35:514 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.trade.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+13:58:35:519 DEBUG 16360 --- [http-nio-8080-exec-6] com.hmall.trade.mapper.CartMapper.selectList   : <==      Total: 0
 15:09:38:877  INFO 16360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 15:09:38:900  INFO 16360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 16:06:28:504  INFO 20608 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.26 on TWind with PID 20608 (E:\JavaSourceCode\hmall\item-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
@@ -265,9 +265,9 @@ com.hmall.common.exception.UnauthorizedException: 未登录
 16:07:09:035  INFO 25116 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 16:07:09:036  INFO 25116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 16:07:09:037  INFO 25116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-16:07:28:536  INFO 10012 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 10012 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
-16:07:28:539 DEBUG 10012 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
-16:07:28:539  INFO 10012 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+16:07:28:536  INFO 10012 --- [main] com.hmall.user.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 10012 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
+16:07:28:539 DEBUG 10012 --- [main] com.hmall.user.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:07:28:539  INFO 10012 --- [main] com.hmall.user.HMallApplication               : The following 1 profile is active: "local"
 16:07:29:177  INFO 10012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
 16:07:29:180  INFO 10012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 16:07:29:207  INFO 10012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
@@ -300,9 +300,9 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
-17:07:58:301  INFO 14888 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 14888 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
-17:07:58:304 DEBUG 14888 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
-17:07:58:304  INFO 14888 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+17:07:58:301  INFO 14888 --- [main] com.hmall.user.HMallApplication               : Starting HMallApplication using Java 11.0.26 on TWind with PID 14888 (E:\JavaSourceCode\hmall\hm-service\target\classes started by thanw in E:\JavaSourceCode\hmall)
+17:07:58:304 DEBUG 14888 --- [main] com.hmall.user.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:07:58:304  INFO 14888 --- [main] com.hmall.user.HMallApplication               : The following 1 profile is active: "local"
 17:07:58:994  INFO 14888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
 17:07:58:996  INFO 14888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 17:07:59:024  INFO 14888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
@@ -320,4 +320,4 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 17:08:01:806  INFO 14888 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
 17:08:01:808  INFO 14888 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
 17:08:01:833  INFO 14888 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-17:08:01:976  INFO 14888 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 4.033 seconds (JVM running for 5.103)
+17:08:01:976  INFO 14888 --- [main] com.hmall.user.HMallApplication               : Started HMallApplication in 4.033 seconds (JVM running for 5.103)

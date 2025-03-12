@@ -1,48 +1,23 @@
 server:
-  port: 8081
-spring:
-  application:
-    name: cart-service
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.247.132:8848
-  profiles:
-    active: dev
-  datasource:
-    url: jdbc:mysql://${hm.db.host}:3306/hm-cart?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ${hm.db.pw}
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
-logging:
-  level:
-    com.hmall: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-knife4j:
-  enable: true
-  openapi:
-    title: 黑马商城购物车接口文档
-    description: "黑马商城购物车接口文档"
-    email: zhanghuyi@itcast.cn
-    concat: 虎哥
-    url: https://www.itcast.cn
-    version: v1.0.0
-    group:
-      default:
-        group-name: default
-        api-rule: package
-        api-rule-resources:
-          - com.hmall.cart.controller
+  port: 8086
 feign:
   okhttp:
+    enabled: true # 开启OKHttp连接池支持
+  sentinel:
     enabled: true
+hm:
+  swagger:
+    title: 购物车服务接口文档
+    package: com.hmall.cart.controller
+  db:
+    database: hm-cart
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.247.133:8858
+      http-method-specify: true
+
+
+
+
