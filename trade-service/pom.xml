@@ -28,6 +28,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
         <!--seata-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

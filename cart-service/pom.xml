@@ -22,6 +22,7 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
+        <!--消息发送-->
         <!--common-->
         <dependency>
             <groupId>com.heima</groupId>

@@ -13,3 +13,4 @@ spring:
           - dataId: shared-log.yaml # 共享日志配置
           - dataId: shared-swagger.yaml
           - dataId: shared-seata.yaml
+          - dataId: shared-rabbitmq.yaml
