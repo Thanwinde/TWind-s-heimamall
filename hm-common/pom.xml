@@ -43,6 +43,11 @@
             <version>9.0.73</version>
             <scope>provided</scope>
         </dependency>
+        <!--消息发送-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-core</artifactId>
@@ -77,7 +82,6 @@
         <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-amqp</artifactId>
-            <scope>provided</scope>
         </dependency>
         <!--Spring整合Rabbit依赖-->
         <dependency>
