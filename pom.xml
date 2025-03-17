@@ -37,6 +37,7 @@
         <spring-cloud-starter-alibaba-seata>2.2</spring-cloud-starter-alibaba-seata>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
         <hutool.version>5.8.11</hutool.version>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
         <mysql.version>8.0.23</mysql.version>
     </properties>
 
